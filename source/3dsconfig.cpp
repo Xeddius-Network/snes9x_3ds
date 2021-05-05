@@ -22,12 +22,12 @@ void config3dsReadWriteInt32(BufferedFileWriter& stream, bool writeMode,
         if (value != NULL)
         {
             //printf ("Writing %s %d\n", format, *value);
-            int len = snprintf(NULL, 0, format, *value);
+            int len = snprintf(NULL, 0, format, *value) + 1;
             if (len < 0)
                 return;
             char buf[len];
             snprintf(buf, len, format, *value);
-            stream.write(buf, len);
+            stream.write(buf, len - 1);
         }
         else
         {
@@ -69,12 +69,12 @@ void config3dsReadWriteString(BufferedFileWriter& stream, bool writeMode,
         if (value != NULL)
         {
             //printf ("Writing %s %s\n", format, value);
-            int len = snprintf(NULL, 0, writeFormat, value);
+            int len = snprintf(NULL, 0, writeFormat, value) + 1;
             if (len < 0)
                 return;
             char buf[len];
             snprintf(buf, len, writeFormat, value);
-            stream.write(buf, len);
+            stream.write(buf, len - 1);
         }
         else
         {
