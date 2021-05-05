@@ -930,10 +930,10 @@ bool settingsReadWriteFullListGlobal(bool writeMode)
     BufferedFileWriter stream;
 
     if (writeMode) {
-        if (!stream.open(S9xGetGameFolder("rom.cfg"), "w"))
+        if (!stream.open(emulatorConfig, "w"))
             return false;
     } else {
-        if (!stream.open(S9xGetGameFolder("rom.cfg"), "r"))
+        if (!stream.open(emulatorConfig, "r"))
             return false;
     }
 
