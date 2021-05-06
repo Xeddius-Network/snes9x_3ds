@@ -19,11 +19,11 @@ public:
         delete[] Buffer;
     }
 
-    explicit operator bool() {
+    explicit operator bool() const {
         return RawFilePointer != NULL;
     }
 
-    FILE* rawFilePointer() {
+    FILE* rawFilePointer() const {
         return RawFilePointer;
     }
 
