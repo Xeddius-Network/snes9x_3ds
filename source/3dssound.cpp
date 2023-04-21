@@ -355,10 +355,10 @@ bool snd3dsInitialize()
     {
 #ifdef LIBCTRU_1_0_0
         //aptOpenSession();
-        APT_SetAppCpuTimeLimit(30); // enables syscore usage
+        APT_SetAppCpuTimeLimit(70); // enables syscore usage
         //aptCloseSession();   
 #else
-        APT_SetAppCpuTimeLimit(30); // enables syscore usage
+        APT_SetAppCpuTimeLimit(70); // enables syscore usage
 #endif
 
 #ifndef RELEASE
