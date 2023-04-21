@@ -292,7 +292,7 @@ bool impl3dsInitializeCore()
     Settings.NetPlay = FALSE;
 	Settings.NoPatch = TRUE;
     Settings.ServerName [0] = 0;
-    Settings.ThreadSound = FALSE;
+    Settings.ThreadSound = TRUE;
     Settings.AutoSaveDelay = 60;         // Bug fix to save SRAM within 60 frames (1 second instead of 30 seconds)
 #ifdef _NETPLAY_SUPPORT
     Settings.Port = NP_DEFAULT_PORT;
