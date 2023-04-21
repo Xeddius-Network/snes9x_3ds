@@ -73,7 +73,7 @@ AccessControlInfo:
  
   Priority                      : 16
  
-  MaxCpu                        : 0x9E # Default
+  MaxCpu                        : 0
  
   DisableDebug                  : false
   EnableForceDebug              : false
